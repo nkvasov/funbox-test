@@ -1,22 +1,23 @@
-
-/* @font-face {
+@font-face {
   font-family: 'Exo-2';
-  src: url('./exo-2-v19-latin_cyrillic-100.woff2') format('woff2'),
-    url('./exo-2-v19-latin_cyrillic-100.woff') format('woff');
+  src: url('./exo-2/exo-2-v19-latin_cyrillic-100.woff2') format('woff2'),
+    url('./exo-2/exo-2-v19-latin_cyrillic-100.woff') format('woff');
   font-weight: 100;
   font-display: swap;
-} */
+}
 
 @font-face {
   font-family: 'TrebuchetMS';
-  src: url('./TrebuchetMS/TrebuchetMS-Bold.woff') format('woff');
+  src: url('./TrebuchetMS/TrebuchetMS-Bold.woff2') format('woff2'),
+    url('./TrebuchetMS/TrebuchetMS-Bold.woff') format('woff');
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'TrebuchetMS';
-  src: url('./TrebuchetMS/TrebuchetMS.woff') format('woff');
+  src: url('./TrebuchetMS/TrebuchetMS.woff2') format('woff2'),
+    url('./TrebuchetMS/TrebuchetMS.woff') format('woff');
   font-weight: 400;
   font-display: swap;
 }

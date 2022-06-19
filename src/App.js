@@ -4,8 +4,8 @@ import Cards from './components/Cards';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Ты сегодня покормил кота?</h1>
+    <div className="main">
+      <h1 className="main__title">Ты сегодня покормил кота?</h1>
       <Cards />
     </div>
   );

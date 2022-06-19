@@ -1,6 +1,28 @@
-.App {
+.main {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   min-height: 100vh;
   background-color: black;
-  background-image:  linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5)), url('./images/bg-pattern.jpg');
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      transparent,
+      rgba(0, 0, 0, 0.5)
+    ),
+    url('./images/bg-pattern.jpg');
   background-size: 100% 100%, 80px 80px;
+}
+
+.main__title {
+  font-family: Exo-2, Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  line-height: 44px;
+  margin-top: 0;
+  margin-bottom: 30px;
 }

@@ -2,7 +2,8 @@
   width: 320px;
   font-family: 'TrebuchetMS', Arial, Helvetica, sans-serif;
   font-weight: 400;
-  margin: 20px 40px;
+  margin: 0 40px 20px;
+  min-height: 522px;
 }
 
 .card__item {
@@ -81,6 +82,7 @@
 
 .card__text-container {
   padding-left: 48px;
+  padding-right: 10px;
   padding-top: 21px;
   flex-grow: 1;
 }

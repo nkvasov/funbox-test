@@ -1,10 +1,6 @@
-import React, { useState } from 'react';
-import cn from 'classnames';
 import './Card.css';
-import cardImage from '../images/cat.png';
 
-const CardDisabled = ({ card, extra, disabled = false }) => {
-
+const CardDisabled = ({ card, extra }) => {
   return (
     <div className="card">
       <div className="card__item card__item_disabled">
@@ -22,7 +18,10 @@ const CardDisabled = ({ card, extra, disabled = false }) => {
 
             <div>
               {extra['mid-text'].map((el) => (
-                <p className="card__text-details card__text-details_disabled">
+                <p
+                  className="card__text-details card__text-details_disabled"
+                  key={el.text}
+                >
                   <span>{el.amount}</span>
                   {' ' + el.text}
                 </p>
@@ -32,8 +31,8 @@ const CardDisabled = ({ card, extra, disabled = false }) => {
 
           <img
             className="card__image card__image_disabled"
-            src={cardImage}
-            alt="корм"
+            src={card.image}
+            alt={card.alt}
           />
         </div>
         <div className="card__border-container">
