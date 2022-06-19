@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/funbox-test/static/css/main.9fc8b84b.css",
-    "main.js": "/funbox-test/static/js/main.d3edafbc.js",
-    "static/js/787.8d5fba68.chunk.js": "/funbox-test/static/js/787.8d5fba68.chunk.js",
+    "main.css": "/funbox-test/static/css/main.9e188913.css",
+    "main.js": "/funbox-test/static/js/main.548827da.js",
     "static/media/cat.png": "/funbox-test/static/media/cat.402e20df40a0ab7fa5cd.png",
     "static/media/TrebuchetMS.woff": "/funbox-test/static/media/TrebuchetMS.af3cbb0e7a5aaa5aad48.woff",
     "static/media/TrebuchetMS-Bold.woff": "/funbox-test/static/media/TrebuchetMS-Bold.ed76e98b5ec0933d740e.woff",
+    "static/media/TrebuchetMS.woff2": "/funbox-test/static/media/TrebuchetMS.86b50a00941b5ee92d57.woff2",
+    "static/media/TrebuchetMS-Bold.woff2": "/funbox-test/static/media/TrebuchetMS-Bold.9511163b0c7680ad523a.woff2",
     "static/media/exo-2-v19-latin_cyrillic-100.woff": "/funbox-test/static/media/exo-2-v19-latin_cyrillic-100.1715b391b07ed72cd187.woff",
     "static/media/exo-2-v19-latin_cyrillic-100.woff2": "/funbox-test/static/media/exo-2-v19-latin_cyrillic-100.890b45d590233edbfe2d.woff2",
     "static/media/card-bg.svg": "/funbox-test/static/media/card-bg.21440610285ea20f29bb.svg",
     "index.html": "/funbox-test/index.html",
-    "main.9fc8b84b.css.map": "/funbox-test/static/css/main.9fc8b84b.css.map",
-    "main.d3edafbc.js.map": "/funbox-test/static/js/main.d3edafbc.js.map",
-    "787.8d5fba68.chunk.js.map": "/funbox-test/static/js/787.8d5fba68.chunk.js.map"
+    "main.9e188913.css.map": "/funbox-test/static/css/main.9e188913.css.map",
+    "main.548827da.js.map": "/funbox-test/static/js/main.548827da.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fc8b84b.css",
-    "static/js/main.d3edafbc.js"
+    "static/css/main.9e188913.css",
+    "static/js/main.548827da.js"
   ]
 }
