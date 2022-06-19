@@ -2,6 +2,7 @@
   width: 320px;
   font-family: 'TrebuchetMS', Arial, Helvetica, sans-serif;
   font-weight: 400;
+  margin: 20px 40px;
 }
 
 .card__item {
@@ -82,6 +83,11 @@
   padding-left: 48px;
   padding-top: 21px;
   flex-grow: 1;
+}
+
+.card__main-text {
+  height: 105px;
+  overflow: hidden;
 }
 
 .card__image_disabled {

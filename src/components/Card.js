@@ -3,7 +3,7 @@ import cn from 'classnames';
 import './Card.css';
 import cardImage from '../images/cat.png';
 
-const Card = ({ card, disabled = false }) => {
+const Card = ({ card, extra, disabled = false }) => {
   const [cardIsSelected, setCardIsSelected] = useState(false);
   const [cardIsHovered, setCardIsHovered] = useState(false);
   const [hoverIsEnabled, setHoverIsEnabled] = useState(!disabled);
@@ -52,11 +52,33 @@ const Card = ({ card, disabled = false }) => {
   const topText =
     hoverIsEnabled && cardIsSelected && cardIsHovered ? (
       <p className={addDisableClass('card__text card__text_warning')}>
-        Котэ не одобряет?
+        {extra['top-text'].warning}
       </p>
     ) : (
-      <p className={addDisableClass('card__text')}>Сказочное заморское яство</p>
+      <p className={addDisableClass('card__text')}>
+        {extra['top-text'].default}
+      </p>
     );
+
+  const bottomText =
+    (disabled && (
+      <p className={addDisableClass('card__description')}>{extra['bottom-text'].disabled}</p>
+    )) ||
+    (!disabled && cardIsSelected && hoverIsEnabled && (
+      <p className="card__description">{card.description}</p>
+    )) ||
+    (!disabled && (!cardIsSelected || !hoverIsEnabled) && (
+      <p className="card__description">
+        {extra['bottom-text'].default}{' '}
+        <span
+          onClick={!disabled && toggleSelectionHandler}
+          onMouseOver={!disabled && mouseOverHandler}
+          onMouseLeave={!disabled && mouseLeaveHandler}
+        >
+          {extra['bottom-text']['default-action']}
+        </span>
+      </p>
+    ));
 
   return (
     <div className="card">
@@ -69,20 +91,23 @@ const Card = ({ card, disabled = false }) => {
         <div className="card__content">
           <div className="card__text-container">
             {topText}
-            <h2 className={addDisableClass('card__title')}>Нямушка</h2>
-            <h2 className={addDisableClass('card__subtitle')}>с фуа-гра</h2>
-            <div>
-              <p className={addDisableClass('card__text-details')}>
-                <span>100</span> порций
-              </p>
-              <p className={addDisableClass('card__text-details')}>
-                <span>5</span> мышей в подарок
-              </p>
-              <p className={addDisableClass('card__text-details')}>
-                заказчик доволен
+            <div className="card__main-text">
+              <h2 className={addDisableClass('card__title')}>{card.title}</h2>
+              <p className={addDisableClass('card__subtitle')}>
+                {card.subtitle}
               </p>
             </div>
+
+            <div>
+              {extra['mid-text'].map((el) => (
+                <p className={addDisableClass('card__text-details')}>
+                  <span>{el.amount}</span>
+                  {' ' + el.text}
+                </p>
+              ))}
+            </div>
           </div>
+
           <img
             className={addDisableClass('card__image')}
             src={cardImage}
@@ -98,8 +123,8 @@ const Card = ({ card, disabled = false }) => {
           >
             <mask id="a" fill="#fff">
               <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
+                // fill-rule="evenodd"
+                // clip-rule="evenodd"
                 d="M0 42.676V468c0 6.627 5.373 12 12 12h296c6.627 0 12-5.373 12-12V12c0-6.627-5.373-12-12-12H42.676L0 42.676Z"
               />
             </mask>
@@ -111,29 +136,12 @@ const Card = ({ card, disabled = false }) => {
         </div>
         <div className="card__extra-container">
           <div className={extraClassName}>
-            <h3>0,5</h3>
-            <p>кг</p>
+            <h3>{card.amount}</h3>
+            <p>{card.unit}</p>
           </div>
         </div>
       </div>
-      {disabled && (
-        <p className={addDisableClass('card__description')}>Все кончилось!</p>
-      )}
-      {!disabled && cardIsSelected && (
-        <p className="card__description">Печень утки разварная с артишоками.</p>
-      )}
-      {!disabled && !cardIsSelected && (
-        <p className="card__description">
-          Чего сидишь? Порадуй котэ,{' '}
-          <span
-            onClick={!disabled && toggleSelectionHandler}
-            onMouseOver={!disabled && mouseOverHandler}
-            onMouseLeave={!disabled && mouseLeaveHandler}
-          >
-            купи.
-          </span>
-        </p>
-      )}
+      {bottomText}
     </div>
   );
 };
