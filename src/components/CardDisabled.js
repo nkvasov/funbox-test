@@ -1,4 +1,5 @@
 import './Card.css';
+// import './Card1.scss';
 
 const CardDisabled = ({ card, extra }) => {
   return (

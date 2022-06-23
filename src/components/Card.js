@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import './Card.css';
+import './Card1.scss';
+// import './Card.css';
+
 
 const Card = ({ card, extra }) => {
   const [cardIsSelected, setCardIsSelected] = useState(false);

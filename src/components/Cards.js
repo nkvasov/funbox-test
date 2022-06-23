@@ -6,6 +6,15 @@ import CardDisabled from './CardDisabled';
 import DUMMY_CARDS from '../constants/DUMMY_CARDS';
 
 const Cards = () => {
+  // const cardsWithKeys = DUMMY_CARDS.map((card) => {
+  //   return (
+  //     <div key={card.product.id}>
+  //       <Card card={card.product} extra={card.extra} />
+  //     </div>
+  //   );
+  // });
+
+  // return <section className="cards">{cardsWithKeys}</section>;
   return (
     <section className="cards">
       {DUMMY_CARDS.map((card) => {
