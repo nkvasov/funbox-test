@@ -1,0 +1,49 @@
+@import '../constants/colors.scss';
+
+.badge {
+  // align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $blue;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px;
+  z-index: 100;
+  transition: background-color 0.2s ease;
+
+  &_color_blue-light {
+    background-color: $blue-hover;
+  }
+
+  &_color_red {
+    background-color: $red;
+  }
+
+  &_color_red-light {
+    background-color: $red-hover;
+  }
+
+  &_color_grey {
+    background-color: $grey-disabled;
+  }
+
+  &__title {
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__subtitle {
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+}

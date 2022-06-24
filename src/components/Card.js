@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import cn from 'classnames';
-import './Card1.scss';
-// import './Card.css';
-
+import './Card.scss';
+import Badge from './Badge';
 
 const Card = ({ card, extra }) => {
   const [cardIsSelected, setCardIsSelected] = useState(false);
@@ -34,13 +33,14 @@ const Card = ({ card, extra }) => {
       hoverIsEnabled && cardIsSelected && cardIsHovered,
   });
 
-  const extraClassName = cn('card__extra-circle', {
-    'card__extra-circle_hover':
-      hoverIsEnabled && cardIsHovered && !cardIsSelected,
-    'card__extra-circle_selected': cardIsSelected,
-    'card__extra-circle_selected-hover':
-      hoverIsEnabled && cardIsSelected && cardIsHovered,
-  });
+  const badgeColor =
+    hoverIsEnabled && cardIsHovered && !cardIsSelected
+      ? 'blue-light'
+      : hoverIsEnabled && cardIsSelected && cardIsHovered
+      ? 'red-light'
+      : cardIsSelected
+      ? 'red'
+      : '';
 
   const topText =
     hoverIsEnabled && cardIsSelected && cardIsHovered ? (
@@ -113,10 +113,12 @@ const Card = ({ card, extra }) => {
           </svg>
         </div>
         <div className="card__extra-container">
-          <div className={extraClassName}>
-            <h3>{card.amount}</h3>
-            <p>{card.unit}</p>
-          </div>
+          <Badge
+            title={card.amount}
+            subtitle={card.unit}
+            color={badgeColor}
+            className="card__badge"
+          />
         </div>
       </div>
       {bottomText}

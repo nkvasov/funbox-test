@@ -1,5 +1,5 @@
-import './Card.css';
-// import './Card1.scss';
+import './Card.scss';
+import Badge from './Badge';
 
 const CardDisabled = ({ card, extra }) => {
   return (
@@ -53,10 +53,12 @@ const CardDisabled = ({ card, extra }) => {
           </svg>
         </div>
         <div className="card__extra-container">
-          <div className="card__extra-circle card__extra-circle_disabled">
-            <h3>{card.amount}</h3>
-            <p>{card.unit}</p>
-          </div>
+          <Badge
+            className="card__badge"
+            color="grey"
+            title={card.amount}
+            subtitle={card.unit}
+          />
         </div>
       </div>
       <p className="card__description card__description_disabled">
