@@ -1,3 +1,4 @@
+/* autoprefixer grid: autoplace */
 .card {
   width: 320px;
   font-family: 'TrebuchetMS', Arial, Helvetica, sans-serif;
@@ -47,7 +48,7 @@
 }
 
 .card__content {
-  grid-area: 1/2;
+  grid-area: 1 / 1 / 2 / 2;
   display: flex;
   flex-direction: column;
 }
@@ -55,7 +56,7 @@
 /* ====================== */
 
 .card__border-container {
-  grid-area: 1/2;
+  grid-area: 1 / 1 / 2 / 2;
   z-index: 100;
 }
 
