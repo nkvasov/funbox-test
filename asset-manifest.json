@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/funbox-test/static/css/main.9e188913.css",
+    "main.css": "/funbox-test/static/css/main.41c10669.css",
     "main.js": "/funbox-test/static/js/main.6d9e5115.js",
     "static/media/cat.png": "/funbox-test/static/media/cat.402e20df40a0ab7fa5cd.png",
     "static/media/TrebuchetMS.woff": "/funbox-test/static/media/TrebuchetMS.af3cbb0e7a5aaa5aad48.woff",
@@ -11,11 +11,11 @@
     "static/media/exo-2-v19-latin_cyrillic-100.woff2": "/funbox-test/static/media/exo-2-v19-latin_cyrillic-100.890b45d590233edbfe2d.woff2",
     "static/media/card-bg.svg": "/funbox-test/static/media/card-bg.21440610285ea20f29bb.svg",
     "index.html": "/funbox-test/index.html",
-    "main.9e188913.css.map": "/funbox-test/static/css/main.9e188913.css.map",
+    "main.41c10669.css.map": "/funbox-test/static/css/main.41c10669.css.map",
     "main.6d9e5115.js.map": "/funbox-test/static/js/main.6d9e5115.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e188913.css",
+    "static/css/main.41c10669.css",
     "static/js/main.6d9e5115.js"
   ]
 }
